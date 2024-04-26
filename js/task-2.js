@@ -1,11 +1,4 @@
-const image = document.createElement("img");
-
-image.src = "<https://picsum.photos/id/11/320/240>";
-image.alt = "Nature";
-
-
-elem.append(el1, el2, ...)
-
+const list = document.querySelector(".gallery");
 
 
 const images = [
@@ -34,3 +27,8 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+
+const newGallery = images.map((img) => `<li class = "wrap-img"><img src="${img.url}" alt="${img.alt}" width = "300" heigth = "250"></li>`).join("");
+
+list.insertAdjacentHTML("beforeend", newGallery);
