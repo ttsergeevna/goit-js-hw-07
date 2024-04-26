@@ -12,6 +12,11 @@ function createBoxes(amount) {
     alert`Кількість елементів має бути числом в межах від 1 до 100`;
     return;
   }
+
+
+  const fragment = document.createDocumentFragment();
+
+
   let size = 30;
   for (let i = 0; i < amount; i++) {
     const divWrap = document.createElement("div");
@@ -24,6 +29,8 @@ function createBoxes(amount) {
 
 
   }
+
+  parentBoxes.appendChild(fragment);
 }
 // get button
 const createButton = document.querySelector('button[data-create]');
