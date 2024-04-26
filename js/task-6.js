@@ -13,7 +13,7 @@ function createBoxes(amount) {
     return;
   }
 
-  parentBoxes.innerHTML = '';
+  parrentBoxes.innerHTML = '';
   const fragment = document.createDocumentFragment();
 
 
@@ -30,7 +30,7 @@ function createBoxes(amount) {
 
   }
   input.value = '';
-  parentBoxes.appendChild(fragment);
+  parrentBoxes.appendChild(fragment);
 }
 // get button
 const createButton = document.querySelector('button[data-create]');
