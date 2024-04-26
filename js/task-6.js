@@ -13,7 +13,7 @@ function createBoxes(amount) {
     return;
   }
 
-
+  parentBoxes.innerHTML = '';
   const fragment = document.createDocumentFragment();
 
 
@@ -29,7 +29,7 @@ function createBoxes(amount) {
 
 
   }
-
+  input.value = '';
   parentBoxes.appendChild(fragment);
 }
 // get button
@@ -42,7 +42,7 @@ const input = document.querySelector('input[type="number"]');
 // processing button
 createButton.addEventListener('click', () => {
   createBoxes(Number(input.value));
-  input.value = '';
+
 });
 
 destroyButton.addEventListener('click', () => {
