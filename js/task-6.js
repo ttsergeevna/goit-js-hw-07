@@ -13,9 +13,9 @@ function createBoxes(amount) {
     return;
   }
 
-  parrentBoxes.innerHTML = '';
-  const fragment = document.createDocumentFragment();
 
+  const fragment = document.createDocumentFragment();
+  parrentBoxes.innerHTML = '';
 
   let size = 30;
   for (let i = 0; i < amount; i++) {
@@ -24,13 +24,11 @@ function createBoxes(amount) {
     divWrap.style.width = `${size}px`;
     divWrap.style.height = `${size}px`;
     divWrap.classList.add("new-boxes")
-    parrentBoxes.appendChild(divWrap);
+    fragment.appendChild(divWrap);
     size += 10;
-
-
   }
-  input.value = '';
   parrentBoxes.appendChild(fragment);
+  input.value = '';
 }
 // get button
 const createButton = document.querySelector('button[data-create]');
